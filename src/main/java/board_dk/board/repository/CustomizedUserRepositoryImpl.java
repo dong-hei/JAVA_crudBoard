@@ -22,7 +22,6 @@ public class CustomizedUserRepositoryImpl implements CustomizedUserRepository {
 
     @Override
     public List<User> findByUsernameCustom(String username) {
-//        원하는 쿼리 작성가능
         QUser qUser = QUser.user;
         JPAQuery<?> query = new JPAQuery<Void>(em);
         List<User> users = query.select(qUser)
